@@ -6,7 +6,7 @@ let cwd = root;
 const directories = {
     work_experience:[
         '',
-        '<white><a href="">Dhani Stock</a></white>',
+        '<white>Dhani Stock</white>',
         '<green>Java Developer</green>',
         '1.Leveraged Google Cloud service to help migrate existing projects to the cloud, reducing deployment time by 30% and increasing security as per market standards.',
 '2.Initiated a service using a time-series database to reduce customer-specific issues by 55%.',
