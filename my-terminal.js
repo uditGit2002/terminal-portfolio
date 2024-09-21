@@ -4,34 +4,43 @@ let cwd = root;
 
 
 const directories = {
-    education: [
+    work_experience:[
+        '',
+        '<white><a href="">Dhani Stock</a></white>',
+        '<green>Java Developer</green>',
+        '1.Leveraged Google Cloud service to help migrate existing projects to the cloud, reducing deployment time by 30% and increasing security as per market standards.',
+'2.Initiated a service using a time-series database to reduce customer-specific issues by 55%.',
+'3.Strengthened different levels of a distributed system architecture to achieve new functionality and increase stabilization by 25%',
+        '',
+        '<green>Junior Java Developer</green>',
+        '1.Developed BSE futures and options buy/sell functionality to increase business growth by 10%.',
+'2.Built functionalities that increased user interaction by 40% using Java Swing.',
+'3.Collaborated closely with cross-functional teams to successfully transition and hand over multiple services, facilitating smooth operations and integration while enhancing code efficiency by 10%.',
+'4.Reduced Latency of existing DB writing process by 30%.',
+'5.Reduced server boot time by 20% for high throughput.',
+'6.Optimized application performance by 40% through efficient Java code and algorithm implementation.',
+'7.Constructed and structured functionalities resulting in a 20% overall improvement in business work and backend performance.'
+
+    ],education: [
         '',
         '<white>education</white>',
-
-        '* <a href="https://en.wikipedia.org/wiki/Kielce_University_of_Technology">Kielce University of Technology</a> <yellow>"Computer Science"</yellow> 2002-2007 / 2011-2014',
-        '* <a href="https://pl.wikipedia.org/wiki/Szko%C5%82a_policealna">Post-secondary</a> Electronic School <yellow>"Computer Systems"</yellow> 2000-2002',
-        '* Electronic <a href="https://en.wikipedia.org/wiki/Technikum_(Polish_education)">Technikum</a> with major <yellow>"RTV"</yellow> 1995-2000',
+        '* <a href="https://www.iimtindia.net/">IIMT College Of Engineering (Gr. Noida)</a> <grey>Bachelors of Technology</grey> \n <yellow>"Computer Science and Engineering"</yellow> 2019-2023',
         ''
     ],
     projects: [
         '',
-        '<white>Open Source projects</white>',
+        '<white>Projects</white>',
         [
-            ['jQuery Terminal',
-             'https://terminal.jcubic.pl',
-             'library that adds terminal interface to websites'
+            ['Power IndiaBulls (PIB):',
+             '',
+             'A Desktop application used for trading in the stock market available for both windows and macOs.'
             ],
-            ['LIPS Scheme',
-             'https://lips.js.org',
-             'Scheme implementation in JavaScript'
+            ['Middle Office Service:','',
+             'An Internal service of<yellow> Dhani</yellow> used for the end of day process held on stock broker end.',
             ],
-            ['Sysend.js',
-             'https://jcu.bi/sysend',
-             'Communication between open tabs'
-            ],
-            ['Wayne',
-             'https://jcu.bi/wayne',
-             'Pure in browser HTTP requests'
+            ['Partner Portal:',
+             '',
+             'An Internal service of<yellow> Dhani</yellow> used by the client management team.'
             ],
         ].map(([name, url, description = '']) => {
             return `* <a href="${url}">${name}</a> &mdash; <white>${description}</white>`;
@@ -45,25 +54,51 @@ const directories = {
         [
             'Java',
             'Javscript',
-            'Python',
             'Bash'
         ].map(lang => `* <yellow>${lang}</yellow>`),
         '',
-        '<white>Technologies</white>',
+        '<white>Backend Technologies</white>',
         [
-            'React.js',
-            'Redux',
-            'Jest',
+            'Spring',
+            'Spring Boot',
+            'Mockito',
         ].map(lib => `* <green>${lib}</green>`),
         '',
         '<white>tools</white>',
         [
             'Docker',
             'git',
-            'GNU/Linux'
-        ].map(lib => `* <blue>${lib}</blue>`),
+            'JPA',
+            'PostMan',
+            'Linux'
+        ].map(tools => `* <blue>${tools}</blue>`),
+        '',
+        '<white>Architectures</white>',
+        [
+            'Distributed Systems',
+            'SOA',
+            'Microservices',
+            'Monolithic',
+        ].map(arch => `* <blue>${arch}</blue>`),
+        '',
+        '<white>Databases</white>',
+        [
+            'MySQL',
+            'MongoDB',
+            'OracleDB',
+            'Postgresql',
+            'Influx DB',
+        ].map(arch => `* <blue>${arch}</blue>`),
         ''
-    ].flat()
+    ].flat(),
+    achievements:[
+        '',
+        '<white><a href="">Education</a></white>',
+        '1. Certified in  Competitive coding from RCPL<brown>(by IIT Kanpur)</brown>.',
+        '2. Hackerrank Problem Solving certificate.',
+        '3. Java 11 Course on Linkedin',
+        
+    ]
 };
 const dirs = Object.keys(directories);
 function print_dirs() {
