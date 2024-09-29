@@ -31,6 +31,10 @@ const directories = {
         '',
         '<white>Projects</white>',
         [
+            ['Dhani Stock App:',
+                '',
+                'A mobile application used for handy trading in stock market'
+               ],
             ['Power IndiaBulls (PIB):',
              '',
              'A Desktop application used for trading in the stock market available for both windows and macOs.'
@@ -93,7 +97,7 @@ const directories = {
     ].flat(),
     achievements:[
         '',
-        '<white><a href="">Education</a></white>',
+        '<white><a href="">Achievements</a></white>',
         '1. Certified in  Competitive coding from RCPL<brown>(by IIT Kanpur)</brown>.',
         '2. Hackerrank Problem Solving certificate.',
         '3. Java 11 Course on Linkedin',
