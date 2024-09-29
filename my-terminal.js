@@ -31,6 +31,10 @@ const directories = {
         '',
         '<white>Projects</white>',
         [
+            ['Dhani Stock App:',
+                '',
+                'A mobile application used for handy trading in stock market'
+               ],
             ['Power IndiaBulls (PIB):',
              '',
              'A Desktop application used for trading in the stock market available for both windows and macOs.'
@@ -93,7 +97,7 @@ const directories = {
     ].flat(),
     achievements:[
         '',
-        '<white><a href="">Education</a></white>',
+        '<white><a href="">Achievements</a></white>',
         '1. Certified in  Competitive coding from RCPL<brown>(by IIT Kanpur)</brown>.',
         '2. Hackerrank Problem Solving certificate.',
         '3. Java 11 Course on Linkedin',
@@ -221,7 +225,20 @@ const term = $('body').terminal(commands, {
     greetings: false, // to hide terminal greeting of  library
     checkArity: false,
     exit: false,
-    completion: true,
+    completion(string) {
+        // in every function we can use this to reference term object
+        const { name, rest } = $.terminal.parse_command(this.get_command());
+        if (['cd', 'ls'].includes(name)) {
+            if (rest.startsWith('~/')) {
+                return dirs.map(dir => `~/${dir}`);
+            }
+            if (cwd === root) {
+                return dirs;
+            }
+        }
+        return Object.keys(commands);
+    },
+    execHash: true,
     prompt
 });
 
