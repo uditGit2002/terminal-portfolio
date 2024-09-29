@@ -225,7 +225,20 @@ const term = $('body').terminal(commands, {
     greetings: false, // to hide terminal greeting of  library
     checkArity: false,
     exit: false,
-    completion: true,
+    completion(string) {
+        // in every function we can use this to reference term object
+        const { name, rest } = $.terminal.parse_command(this.get_command());
+        if (['cd', 'ls'].includes(name)) {
+            if (rest.startsWith('~/')) {
+                return dirs.map(dir => `~/${dir}`);
+            }
+            if (cwd === root) {
+                return dirs;
+            }
+        }
+        return Object.keys(commands);
+    },
+    execHash: true,
     prompt
 });
 
